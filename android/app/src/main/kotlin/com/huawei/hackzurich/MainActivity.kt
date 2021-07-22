@@ -1,4 +1,4 @@
-package com.huawei.hackzurich.hms_start_hacking_flutter
+package com.huawei.hackzurich
 
 import io.flutter.embedding.android.FlutterActivity
 
