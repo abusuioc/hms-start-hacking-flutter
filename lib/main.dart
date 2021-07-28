@@ -19,16 +19,27 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class MyHomePage extends StatelessWidget {
   MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
+  Widget build(BuildContext context) {
+    return Scaffold(
+      /**/
+      appBar: AppBar(
+        title: Text(title),
+      ),
+      body: FutureBuilder<void>(
+          future: _checkHMS(),
+          builder: (BuildContext context, AsyncSnapshot<void> snapshot) {
+            final String message = _getMessageFromSnapshot(snapshot);
+            return Text(message);
+          }),
+    );
+  }
 
-class _MyHomePageState extends State<MyHomePage> {
   Future<void> _checkHMS() async {
     await _testHmsCorePresence();
     await _testAccountByRequestingPushNotificationsToken();
@@ -47,8 +58,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<void> _testAccountByRequestingPushNotificationsToken() async {
     await Push.getToken("HCM");
     final pushToken = await Push.getTokenStream.first;
-    if(pushToken.isEmpty) {
-      throw new Exception('Push notifications token retrieved, but empty. Clear app data and try again.');
+    if (pushToken.isEmpty) {
+      throw new Exception(
+          'Push notifications token retrieved, but empty. Clear app data and try again.');
     }
   }
 
@@ -66,21 +78,5 @@ class _MyHomePageState extends State<MyHomePage> {
       case ConnectionState.none:
         return 'Checking HMS disabled.';
     }
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      /**/
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: FutureBuilder<void>(
-          future: _checkHMS(),
-          builder: (BuildContext context, AsyncSnapshot<void> snapshot) {
-            final String message = _getMessageFromSnapshot(snapshot);
-            return Text(message);
-          }),
-    );
   }
 }
