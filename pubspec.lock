@@ -68,7 +68,7 @@ packages:
       name: flutter_plugin_android_lifecycle
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.11"
+    version: "2.0.3"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -81,34 +81,27 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.13.0+5"
-  huawei_awareness:
-    dependency: "direct main"
-    description:
-      name: huawei_awareness
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.7+304"
   huawei_hmsavailability:
     dependency: "direct main"
     description:
       name: huawei_hmsavailability
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.2.0+300"
+    version: "5.2.0+301"
   huawei_location:
     dependency: "direct main"
     description:
       name: huawei_location
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.1.0+301"
+    version: "5.1.0+303"
   huawei_map:
     dependency: "direct main"
     description:
       name: huawei_map
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.0.3+303"
+    version: "5.3.0+301"
   huawei_ml:
     dependency: "direct main"
     description:
@@ -123,20 +116,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "5.1.1+301"
-  huawei_scan:
-    dependency: "direct main"
-    description:
-      name: huawei_scan
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.3.0+300"
   huawei_site:
     dependency: "direct main"
     description:
       name: huawei_site
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.1.0+301"
+    version: "5.2.0+300"
   matcher:
     dependency: transitive
     description:
@@ -190,7 +176,7 @@ packages:
       name: stream_transform
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.2.0"
+    version: "2.0.0"
   string_scanner:
     dependency: transitive
     description:
@@ -228,4 +214,4 @@ packages:
     version: "2.1.0"
 sdks:
   dart: ">=2.12.0 <3.0.0"
-  flutter: ">=1.12.13+hotfix.6"
+  flutter: ">=2.0.0"
