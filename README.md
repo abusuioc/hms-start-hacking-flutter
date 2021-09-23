@@ -8,8 +8,8 @@ You have a bunch of fresh ideas and you aspire to make them possible with the he
 ### I'm in!
 
 1. fork/clone this project
-2. visit the workshop Slack channel [#tbd]() 
-3. look for the file with secrets ([direct link (tbd)]())
+2. visit the workshop Slack channel [#03_ws04_huawei](https://hackzurich2021.slack.com/archives/C02ALK7DHPA) 
+3. look for the file with secrets ([direct link ](https://hackzurich2021.slack.com/files/U02DJ2Z2C9L/F02FKD83SMA/secrets_to_unzip_in_project_root.zip))
 4. unzip the file into the project's *android* directory
 5. start coding!
 
