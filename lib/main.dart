@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:huawei_hmsavailability/huawei_hmsavailability.dart';
-import 'package:huawei_push/huawei_push_library.dart';
+import 'package:huawei_push/huawei_push.dart';
 
 void main() {
   runApp(MyApp());
@@ -56,7 +56,7 @@ class MyHomePage extends StatelessWidget {
   }
 
   Future<void> _testAccountByRequestingPushNotificationsToken() async {
-    await Push.getToken("HCM");
+    Push.getToken("HCM");
     final pushToken = await Push.getTokenStream.first;
     if (pushToken.isEmpty) {
       throw new Exception(

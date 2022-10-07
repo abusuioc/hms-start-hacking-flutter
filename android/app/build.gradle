@@ -31,17 +31,16 @@ apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 apply plugin: 'com.huawei.agconnect'
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    compileSdkVersion 33
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
 
     defaultConfig {
-        applicationId "com.huawei.hackzurich"
-        minSdkVersion 26 //because of com.huawei.hms:image-vision:1.0.3.304 (otherwise 19)
-        targetSdkVersion 30
+        applicationId "hms.starter"
+        minSdkVersion 26 //needed by AR plugin
+        targetSdkVersion 33
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
